@@ -10,8 +10,9 @@
         <link href="https://fonts.googleapis.com/css?family=Kanit|Prompt" rel="stylesheet">
     </head>
     <body style="background-color: #9E9E9E;">
+      <div class="w3-container" style="width:90%; margin-left:auto; margin-right:auto;">  
         <div class="w3-container" id="header-container">
-            <ul class="w3-navbar w3-right">
+            <ul class="w3-navbar w3-center">
               <li class="w3-dropdown-hover w3-white">
                   <a href="#">ผู้สนใจ <i class="fa fa-caret-down"></i></a>
                   <div class="w3-dropdown-content w3-white w3-card-4">
@@ -33,14 +34,14 @@
                 <div class="w3-container w3-twothird">
                     <img src="./img/web-logo.png" id="web-logo">
                 </div>
-                <div class="w3-container w3-third">
-                 <input class="w3-input w3-border" type="text" style="width:158px; height:31px;">
-                 <button class="w3-btn w3-grey" style="width:90px; margin-top:3px;">search</button>
+                <div class="w3-container w3-third" style="display:inline">
+                 <input class="w3-input w3-border" type="text" style="width:45%;">
+                 <button class="w3-btn w3-grey" style="margin-top:3px; margin-left:10px;">search</button>
                 </div>
            <img src="./img/web-quote.jpg" id="web-quote">
         </div>
-        <div class="w3-container" id="myNavbar">
-            <ul class="w3-navbar" style="color:#fff; background-color: #616161; display:flex;">
+        <div class="" id="myNavbar">
+            <ul class="w3-navbar" style="color:#fff; background-color: #616161;">
                 <li class="w3-dropdown-hover">
                     <a href="#"><i class="fa fa-home"></i> หน้าแรก</a>
                 </li>
@@ -92,196 +93,164 @@
                 </li>
             </ul>
         </div>
-        <div class="w3-container" style="text-align: center;">
-            <img src="./img/web-cover.jpg" style="margin-top:15px; width:85%;">
-        </div>
-        <section class="w3-container" id="content-container">
+        <img src="./img/web-cover.jpg" style="margin-top:15px; width:100%;">
+        <section id="content-container">
             <div class="w3-container" style="background-color:#E0E0E0; margin-top:15px; padding-bottom:15px; margin-bottom:10px;">
-                <div class="w3-threequarter">
+                <div class="w3-col s12 m9">
+                   <div class="w3-container">
                     <p class="web-content-topic"><i class="fa fa-file-text-o"></i>&nbsp ความสำเร็จ</p>
-                    <div class="w3-layout-row w3-row-padding content-3card" style="display:flex;">
-                            <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
-                                <img src="./img/web-content1.jpg" class="web-content-img">
-                                <div class="w3-container w3-center">
-                                    <p>นิสิตวิศวฯ คอม จุฬาฯ แชมป์โลก Microsoft Imagine Cup 2016 ประเภทเกมส์...</p>
-                                </div>
-                            </div>
-                            <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
-                                <img src="./img/web-content2.jpg" class="web-content-img">
-                                <div class="w3-container w3-center">
-                                    <p>ภาควิชาวิศวกรรมคอมพิวเตอร์ ขอแสดงความยินดี ผศ.ดร. เกริก ภิรมย์โสภา...</p>
-                                </div>
-                            </div>
-                            <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
-                                <img src="./img/web-content3.jpg" class="web-content-img">
-                                <div class="w3-container w3-center">
-                                    <p>ภาควิชาวิศวกรรมคอมพิวเตอร์ ขอแสดงความยินดี กับนิสิตที่ได้รับรางวัล ในงาน NSC2016 ครั้ง...</p>
-                                </div>
-                            </div>    
+                    <div class="w3-row content-3card">
+                       <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
+                           <img src="./img/web-content1.jpg" class="web-content-img">
+                           <p>นิสิตวิศวฯ คอม จุฬาฯ แชมป์โลก Microsoft Imagine Cup 2016 ประเภทเกมส์...</p>
+                        </div>
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
+                           <img src="./img/web-content2.jpg" class="web-content-img">
+                           <p>ภาควิชาวิศวกรรมคอมพิวเตอร์ ขอแสดงความยินดี ผศ.ดร. เกริก ภิรมย์โสภา...</p>
+                        </div>
+                        <div class="w3-card-2 w3-hover-shadow  w3-col s6 m4">
+                           <img src="./img/web-content3.jpg" class="web-content-img">
+                           <p>ภาควิชาวิศวกรรมคอมพิวเตอร์ ขอแสดงความยินดี กับนิสิตที่ได้รับรางวัล ในงาน NSC2016 ครั้ง...</p>
+                        </div>    
                     </div>
                     <button class="w3-btn">อ่านความสำเร็จทั้งหมด <i class="fa fa-caret-right" aria-hidden="true"></i></button>
-                    <p class="web-content-topic"><i class="fa fa-file-text-o"></i>&nbsp สัมมนา/ประชุมวิชาการ</p>
-                    <div class="w3-layout-row w3-row-padding content-2card">
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
-                            <img src="./img/web-content4.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>เอกสารแจก งานสัมมนาบัณฑิตศึกษา 2558...</p>
-                            </div>
-                        </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
-                            <img src="./img/web-content5.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>เอกสารจากงาน ILP Forum เรื่อง "Big Data"</p>
-                            </div>
-                        </div>
+                  </div>
+                  <div class="w3-container">
+                  <p class="web-content-topic"><i class="fa fa-file-text-o"></i>&nbsp สัมมนา/ประชุมวิชาการ</p>
+                  <div class="w3-row content-2card" style="width:100%;">
+                    <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
+                       <img src="./img/web-content4.jpg" class="web-content-img">
+                       <p>เอกสารแจก งานสัมมนาบัณฑิตศึกษา 2558...</p>
                     </div>
-                    <button class="w3-btn">อ่านสัมมนา/ประชุมวิชาการทั้งหมด&nbsp <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                    <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
+                       <img src="./img/web-content5.jpg" class="web-content-img">
+                       <p>เอกสารจากงาน ILP Forum เรื่อง "Big Data"</p>
+                     </div>
+                   </div>
+                   <button class="w3-btn">อ่านสัมมนา/ประชุมวิชาการทั้งหมด&nbsp <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                  </div>
+                  <div class="w3-container"> 
                     <p class="web-content-topic"><i class="fa fa-file-text-o"></i>&nbsp เรื่องทั่วไป</p>
-                    <div class="w3-layout-row w3-row-padding content-3card">
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                    <div class="w3-row content-3card">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default1.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>update 25/1/2560 ประกาศรับสมัครหลักสูตรระดับบัณฑิต...</p>
-                            </div>
+                            <p>update 25/1/2560 ประกาศรับสมัครหลักสูตรระดับบัณฑิต...</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default1.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
-                            </div>
+                            <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default1.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
-                            </div>
-                        </div>
+                            <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
+                         </div>
+                      </div>
+                     <button class="w3-btn">อ่านเรื่องทั่วไปทั้งหมด <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                     </div>
-                    <button class="w3-btn">อ่านเรื่องทั่วไปทั้งหมด <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                   <div class="w3-container" style="width:100%;">
                     <p class="web-content-topic"><i class="fa fa-file-text-o"></i>&nbsp บัณฑิตศึกษา</p>
-                    <div class="w3-layout-row w3-row-padding content-3card">
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                    <div class="w3-row content-3card" style="padding-right:10px;">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default2.png" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>update 25/1/2560 ประกาศรับสมัครหลักสูตรระดับบัณฑิต...</p>
-                            </div>
+                            <p>update 25/1/2560 ประกาศรับสมัครหลักสูตรระดับบัณฑิต...</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default2.png" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
-                            </div>
+                            <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default2.png" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
-                            </div>
+                            <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
                         </div>
                     </div>
-                    <div class="w3-layout-row w3-row-padding content-3card" style="margin-top:30px;">
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                    <div class="w3-row content-3card">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default2.png" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>update 25/1/2560 ประกาศรับสมัครหลักสูตรระดับบัณฑิต...</p>
-                            </div>
+                            <p>update 25/1/2560 ประกาศรับสมัครหลักสูตรระดับบัณฑิต...</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default2.png" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
-                            </div>
+                            <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default3.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
-                            </div>
+                            <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
                         </div>
                     </div>
                     <button class="w3-btn">อ่านบัณฑิตศึกษาทั้งหมด&nbsp <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                   </div>
+                   <div class="w3-container">
                     <p class="web-content-topic"><i class="fa fa-file-text-o"></i>&nbsp ทุนการศึกษา</p>
-                    <div class="w3-layout-row w3-row-padding content-3card" style="margin-top:30px;">
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                    <div class="w3-row content-3card">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default2.png" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>update 25/1/2560 ประกาศรับสมัครหลักสูตรระดับบัณฑิต...</p>
-                            </div>
+                            <p>update 25/1/2560 ประกาศรับสมัครหลักสูตรระดับบัณฑิต...</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default2.png" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
-                            </div>
+                            <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default3.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
-                            </div>
+                            <p>(Update 2/03/2559) ประกาศรับสมัครทุนอุดหนุนการศึกษาระดับบัณฑิตศึกษา...</p>
                         </div>
                     </div>
                     <button class="w3-btn">อ่านทุนการศึกษาทั้งหมด&nbsp <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                   </div>
+                   <div class="w3-container">
                     <p class="web-content-topic"><i class="fa fa-file-text-o"></i>&nbsp กิจกรรมนิสิต</p>
-                    <div class="w3-layout-row w3-row-padding content-2card">
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                    <div class="w3-row content-2card" style="width:100%;">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content6.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>นิสิตภาควิชาวิศวกรรมคอมพิวเตอร์ ได้รับรางวัลจากการแข่งขันพํฒนาโปรแกรมคอมพิวเตอร์...</p>
-                            </div>
+                            <p>นิสิตภาควิชาวิศวกรรมคอมพิวเตอร์ ได้รับรางวัลจากการแข่งขันพํฒนาโปรแกรมคอมพิวเตอร์...</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content-default2.png" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>ทดสอบกิจกรรมนิสิต</p>
-                            </div>
+                            <p>ทดสอบกิจกรรมนิสิต</p>
                         </div>
                     </div>
                     <button class="w3-btn">อ่านกิจกรรมนิสิตทั้งหมด&nbsp <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                   </div>
+                   <div class="w3-container">
                     <p class="web-content-topic"><i class="fa fa-file-text-o"></i>&nbsp ฝึกงาน หางาน</p>
-                    <div class="w3-layout-row w3-row-padding content-3card">
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                    <div class="w3-row content-3card">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content7.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>บรรยากาศงาน CP Job Fair 2014</p>
-                            </div>
+                            <p>บรรยากาศงาน CP Job Fair 2014</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content8.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>งานแนะแนวฝึกงาน 2557</p>
-                            </div>
+                            <p>งานแนะแนวฝึกงาน 2557</p>
                         </div>
-                        <div class="w3-card-2 w3-hover-shadow w3-layout-cell">
+                        <div class="w3-card-2 w3-hover-shadow w3-col s6 m4">
                             <img src="./img/web-content9.jpg" class="web-content-img">
-                            <div class="w3-container w3-center">
-                                <p>ขอเชิญรวมนิทรรศการงานด้านวิศวกรรมคอมพิวเตอร์ (CP Job Fair)...</p>
-                            </div>
+                            <p>ขอเชิญรวมนิทรรศการงานด้านวิศวกรรมคอมพิวเตอร์ (CP Job Fair)...</p>
                         </div>
                     </div>
                     <button class="w3-btn">อ่านฝึกงาน-หางานทั้งหมด&nbsp <i class="fa fa-caret-right" aria-hidden="true"></i></button>
+                   </div>
                 </div>
                 <div class="w3-container w3-quarter">
                     <p class="web-content-topic"><i class="fa fa-star-o" aria-hidden="true"></i>&nbsp เมนูด่วน</p>
                     <ul class="w3-ul w3-hoverable">
-                        <li>หน้าแรก</li>
-                        <li>งานสัมมนา/ประชุมวิชาการ (เอกสาร)</li>
-                        <li>Channel: 1001 Academy</li>
-                        <li>ติดต่อเรา</li>
-                        <li>รู้จักวิศวกรรมคอมพิวเตอร์</li>
-                        <li>ป.ตรี วิศวกรรมคอมพิวเตอร์ (CP)</li>
-                        <li>ป.โท วิศวกรรมคอมพิวเตอร์ (CM)</li>
-                        <li>ป.โท วิศวกรรมซอฟต์แวร์ (SE)</li>
-                        <li>ป.โท วิทยาศาสตร์คอมพิวเตอร์ (CS)</li>
-                        <li>ป.เอก วิศวกรรมคอมพิวเตอร์ (CD)</li>
-                        <li>วิจัย / บริการวิชาการ</li>
-                        <li>ห้องปฏิบัติการวิจัย</li>
-                        <li>ศิษย์เก่า</li>
+                        <li><a href="#" style="text-decoration:none;">หน้าแรก</a></li>
+                        <li><a href="#" style="text-decoration:none;">งานสัมมนา/ประชุมวิชาการ (เอกสาร)</a></li>
+                        <li><a href="#" style="text-decoration:none;">Channel: 1001 Academy</a></li>
+                        <li><a href="#" style="text-decoration:none;">ติดต่อเรา</a></li>
+                        <li><a href="#" style="text-decoration:none;">รู้จักวิศวกรรมคอมพิวเตอร์</a></li>
+                        <li><a href="#" style="text-decoration:none;">ป.ตรี วิศวกรรมคอมพิวเตอร์ (CP)</a></li>
+                        <li><a href="#" style="text-decoration:none;">ป.โท วิศวกรรมคอมพิวเตอร์ (CM)</a></li>
+                        <li><a href="#" style="text-decoration:none;">ป.โท วิศวกรรมซอฟต์แวร์ (SE)</a></li>
+                        <li><a href="#" style="text-decoration:none;">ป.โท วิทยาศาสตร์คอมพิวเตอร์ (CS)</a></li>
+                        <li><a href="#" style="text-decoration:none;">ป.เอก วิศวกรรมคอมพิวเตอร์ (CD)</a></li>
+                        <li><a href="#" style="text-decoration:none;">วิจัย / บริการวิชาการ</a></li>
+                        <li><a href="#" style="text-decoration:none;">ห้องปฏิบัติการวิจัย</a></li>
+                        <li><a href="#" style="text-decoration:none;">ศิษย์เก่า</a></li>
                     </ul>
                 </div> 
             </div>
             <div class="w3-container">
-                <div class="w3-container w3-half">
+                <div class="w3-container w3-third" style="padding-bottom:20px;">
                     <p class="web-content-topic"><i class="fa fa-paperclip" aria-hidden="true"></i>&nbsp ข่าวภาควิชาฯ ในหน้าสื่อ</p>
                     <table class="w3-table-all w3-hoverable">
                         <tr>
@@ -307,13 +276,13 @@
                     </table>
                     <button class="w3-btn">อ่านข่าวทั้งหมด&nbsp <i class="fa fa-caret-right" aria-hidden="true"></i></button>
                 </div>
-                <div class="w3-container w3-half" style="padding-bottom:10px;">
+                <div class="w3-container w3-twothird">
                 <p class="web-content-topic"><i class="fa fa-youtube-play" aria-hidden="true"></i>&nbsp วิดีโอ</p>
-                <iframe width="500" height="300" src="https://www.youtube.com/embed/RFYSRB9EqmU" frameborder="0" allowfullscreen>
+                <iframe src="https://www.youtube.com/embed/RFYSRB9EqmU" frameborder="0" allowfullscreen>
                 </iframe> 
                 </div>
             </div>
-            <div class="w3-container w3-black" style="text-align: center;">
+            <div class="w3-container w3-black" style="text-align: center; font-size:12px;">
                 <p>เว็บไซต์นี้แสดงผลได้ดีที่สุดใน <i class="fa fa-chrome" aria-hidden="true"></i></p>
                 <img src="./img/web-logo.png" style="width:40%;">
                 <p>ภาควิชาวิศวกรรมคอมพิวเตอร์ คณะวิศวกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย</p>
@@ -324,5 +293,6 @@
                 <p>www.cp.eng.chula.ac.th <i class="fa fa-facebook-square" aria-hidden="true"></i> <i class="fa fa-twitter-square" aria-hidden="true"></i> <i class="fa fa-instagram" aria-hidden="true"></i></p>
             </div>  
         </section>
+      </div> 
     </body>
 </html>
