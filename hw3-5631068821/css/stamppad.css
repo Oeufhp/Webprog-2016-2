@@ -26,7 +26,7 @@
 	background-image: none;
 }
 #stamper-panel .stamper.current{
-	background-image: url(./img/bg_glow.png);
+	background-image: url(../img/bg_glow.png);
 }
 #canvas-background{
 	width:560px;

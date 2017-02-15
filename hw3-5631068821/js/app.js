@@ -2,34 +2,50 @@ var imgSrc,imgAttr;
 $(document).on("click","#stamper-panel img",function(e){
     imgAttr=$(this).attr('stamper');
     console.log(imgAttr);
-    // var imgSrc='';
     if(imgAttr==='star'){
-        imgSrc=$("#hidden-stamp-marks img[stamper$='star']").attr('src');
+        imgSrc=$("#hidden-stamp-marks img[stamper$='"+imgAttr+"']").attr('src');
         console.log(imgSrc);
-        var imgGlow=$('<img src="./img/bg_glow.png"/>');
-        imgGlow.css({
-            'position':'absolute',
-            'margin-top':0
-            // 'z-index':50
-        })
-        $('#star-div').append(imgGlow);
-        
+        $(this).addClass('current');
+        $("#stamper-panel img[stamper$='heart']").removeClass('current');
+        $("#stamper-panel img[stamper$='mickey']").removeClass('current');
+        $("#stamper-panel img[stamper$='paw']").removeClass('current');
+        $("#stamper-panel img[stamper$='crown']").removeClass('current');
     }
     else if(imgAttr==='heart'){
-        imgSrc=$("#hidden-stamp-marks img[stamper$='heart']").attr('src');
+        imgSrc=$("#hidden-stamp-marks img[stamper$='"+imgAttr+"']").attr('src');
         console.log(imgSrc);
+        $(this).addClass('current');
+        $("#stamper-panel img[stamper$='star']").removeClass('current');
+        $("#stamper-panel img[stamper$='mickey']").removeClass('current');
+        $("#stamper-panel img[stamper$='paw']").removeClass('current');
+        $("#stamper-panel img[stamper$='crown']").removeClass('current');
     }
     else if(imgAttr==='mickey'){
-        imgSrc=$("#hidden-stamp-marks img[stamper$='mickey']").attr('src');
+        imgSrc=$("#hidden-stamp-marks img[stamper$='"+imgAttr+"']").attr('src');
         console.log(imgSrc);
+        $(this).addClass('current');
+        $("#stamper-panel img[stamper$='star']").removeClass('current');
+        $("#stamper-panel img[stamper$='heart']").removeClass('current');
+        $("#stamper-panel img[stamper$='paw']").removeClass('current');
+        $("#stamper-panel img[stamper$='crown']").removeClass('current');
     }
     else if(imgAttr==='paw'){
-        imgSrc=$("#hidden-stamp-marks img[stamper$='paw']").attr('src');
+        imgSrc=$("#hidden-stamp-marks img[stamper$='"+imgAttr+"']").attr('src');
         console.log(imgSrc);
+        $(this).addClass('current');
+        $("#stamper-panel img[stamper$='star']").removeClass('current');
+        $("#stamper-panel img[stamper$='heart']").removeClass('current');
+        $("#stamper-panel img[stamper$='mickey']").removeClass('current');
+        $("#stamper-panel img[stamper$='crown']").removeClass('current');
     }
     else if(imgAttr==='crown'){
-        imgSrc=$("#hidden-stamp-marks img[stamper$='crown']").attr('src');
+        imgSrc=$("#hidden-stamp-marks img[stamper$='"+imgAttr+"']").attr('src');
         console.log(imgSrc);
+        $(this).addClass('current');
+        $("#stamper-panel img[stamper$='star']").removeClass('current');
+        $("#stamper-panel img[stamper$='heart']").removeClass('current');
+        $("#stamper-panel img[stamper$='mickey']").removeClass('current');
+        $("#stamper-panel img[stamper$='paw']").removeClass('current');
     }
 });
 $('#stamppad-canvas').click(function(e){
