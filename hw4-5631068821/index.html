@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>webprog hw4 by oeufhp</title>
+        <meta lang="en">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.1/css/bulma.min.css">
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">        
+    </head>
+    <body>
+        <!--<div class="container">-->
+            <section class="hero is-primary">
+                <div class="hero-body" style="width:100%;"> 
+                    <h1 class="title" style="text-align: center;">WEB API EXAMPLE</h1>
+                </div>   
+            </section>    
+          <div class="container" style="margin-top:20px;">  
+            <div class="columns is-12">
+                <div class="column is-6 is-offset-3">
+                    <p class="control">
+                        <label class="label" for="input-keyword">Search anything</label>
+                        <input class="input" type="text" id="input-keyword" placeholder="type your keyword here" valve="">
+                    </p>
+                </div>
+                <div class="column is-6">
+                    <p class="control" style="padding-top:27px;">
+                        <button type="submit" class="button is-primary" id="search-btn">Search</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container is-fluid" style="width:100%; margin-top:30px;"> 
+            <div class="columns" id="showing-div"  style="width:100%;">
+
+            </div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+            $('#search-btn').click(function(){
+                var keyword=$('#input-keyword').val().trim();
+                var elem='';
+                var img='',title='',subtitle='';
+                var search_url='https://kgsearch.googleapis.com/v1/entities:search';
+                var params={
+                    'query':keyword,
+                    'limit':5,
+                    'indent':true,
+                    'key':'AIzaSyDO5NxW6unr8TCDFtg5kQ_m6vE-OcWfMVQ'
+                }
+                $.getJSON(search_url + '?callback=?', params, function(response) {
+                    // console.log(response['itemListElement']);
+                    $.each(response['itemListElement'], function(i, element) {
+                        if(element['result']['image']!==undefined) {
+                            img='<img src="'+element['result']['image']['contentUrl']+'" class="image">';
+                        }
+                        else img='<img src="./img/not-available-circle.svg">';   
+                        title=element['result']['name'];
+                        subtitle=element['result']['description'];
+                        elem+='<div class="column"><div class="card"><div class="card-image"><figure class="image">'+img+'</figure></div> <div class="card-content"> <div class="media-content"><p class="title is-4">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                    });
+                 $('#showing-div').append(elem);
+                 });
+            });   
+        </script>
+    </body>
+</html>
