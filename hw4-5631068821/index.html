@@ -30,37 +30,76 @@
                 </div>
             </div>
         </div>
-        <div class="container is-fluid" style="width:100%; margin-top:30px;"> 
-            <div class="columns" id="showing-div"  style="width:100%;">
-
+        <div class="container" style="width:100%; margin-top:30px;"> 
+            <div class="columns" id="showing-div1">
+            </div>
+            <div class="modal">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <header class="modal-card-head">
+                        <p class="modal-card-title"></p>
+                        <button class="delete"></button>
+                    </header>
+                    <section class="modal-card-body"></section>
+                </div>
+            </div>
+            <div class="columns" id="showing-div2">
+            </div>
+            <div class="columns" id="showing-div3">
             </div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script>
             $('#search-btn').click(function(){
+                $('#showing-div1 div').remove();
                 var keyword=$('#input-keyword').val().trim();
-                var elem='';
+                var row1='',row2='',row3='';
                 var img='',title='',subtitle='';
                 var search_url='https://kgsearch.googleapis.com/v1/entities:search';
                 var params={
                     'query':keyword,
-                    'limit':5,
+                    'limit':15,
                     'indent':true,
                     'key':'AIzaSyDO5NxW6unr8TCDFtg5kQ_m6vE-OcWfMVQ'
                 }
                 $.getJSON(search_url + '?callback=?', params, function(response) {
-                    // console.log(response['itemListElement']);
                     $.each(response['itemListElement'], function(i, element) {
-                        if(element['result']['image']!==undefined) {
-                            img='<img src="'+element['result']['image']['contentUrl']+'" class="image">';
-                        }
-                        else img='<img src="./img/not-available-circle.svg">';   
-                        title=element['result']['name'];
-                        subtitle=element['result']['description'];
-                        elem+='<div class="column"><div class="card"><div class="card-image"><figure class="image">'+img+'</figure></div> <div class="card-content"> <div class="media-content"><p class="title is-4">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                            if(i<5){
+                                // console.log(element);
+                                if(element['result']['image']!==undefined) {
+                                    img='<img src="'+element['result']['image']['contentUrl']+'" class="image">';
+                                }
+                                else img='<img src="./img/not-available-circle.svg">';   
+                                title=element['result']['name'];
+                                subtitle=element['result']['description'];
+                                row1+='<div class="column"><div class="card" id="div'+i+'"><div class="card-image"><figure class="image" style="max-width:200px;">'+img+'</figure></div> <div class="card-content"> <div class="media-content" style="flex-basis:auto;"><p class="title is-5">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                            }
+                            else if(i>=5 && i<10){
+                                if(element['result']['image']!==undefined) {
+                                    img='<img src="'+element['result']['image']['contentUrl']+'" class="image">';
+                                }
+                                else img='<img src="./img/not-available-circle.svg">';   
+                                title=element['result']['name'];
+                                subtitle=element['result']['description'];
+                                row2+='<div class="column"><div class="card"><div class="card-image"><figure class="image">'+img+'</figure></div> <div class="card-content"> <div class="media-content"  style="flex-basis:auto;"><p class="title is-5">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                            }
+                            else{
+                                if(element['result']['image']!==undefined) {
+                                    img='<img src="'+element['result']['image']['contentUrl']+'" class="image">';
+                                }
+                                else img='<img src="./img/not-available-circle.svg">';   
+                                title=element['result']['name'];
+                                subtitle=element['result']['description'];
+                                row3+='<div class="column"><div class="card"><div class="card-image"><figure class="image" style="max-width:200px;">'+img+'</figure></div> <div class="card-content"> <div class="media-content"><p class="title is-5">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                            }
                     });
-                 $('#showing-div').append(elem);
+                    $('#showing-div1').append(row1);
+                    $('#showing-div2').append(row2);
+                    $('#showing-div3').append(row3);
                  });
+            });
+            $('div .column .card .card-image').click(function(){
+                console.log($(this).attr('id'));
             });   
         </script>
     </body>
