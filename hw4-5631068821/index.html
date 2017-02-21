@@ -62,7 +62,12 @@
                                 else img='<img src="./img/not-available-circle.svg"  style="width:90%;>';   
                                 title=element['result']['name'];
                                 subtitle=element['result']['description'];
-                                row1+='<div class="column"><div class="card" style="display:flex; height:100%;"><div class="card-image">'+img+'</div> <div class="card-content"> <div class="media-content"><p class="title is-5" style="padding-top:20px;">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                                if(element['result']['url']!=undefined){
+                                    row1+='<div class="column"><div class="card" style="display:flex; height:100%;"><div class="card-image">'+img+'</div> <div class="card-content"> <div class="media-content"><a style="text-decoration:none;" target="_blank" href="'+element['result']['url']+'"><p class="title is-5" style="padding-top:20px;">'+title+'</p></a><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                                }
+                                else{
+                                    row1+='<div class="column"><div class="card" style="display:flex; height:100%;"><div class="card-image">'+img+'</div> <div class="card-content"> <div class="media-content"><p class="title is-5" style="padding-top:20px;">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                                }
                             }
                             else if(i>=5 && i<10){
                                 if(element['result']['image']!==undefined) {
@@ -71,7 +76,12 @@
                                 else img='<img src="./img/not-available-circle.svg"  style="width:90%;>';   
                                 title=element['result']['name'];
                                 subtitle=element['result']['description'];
-                                row2+='<div class="column"><div class="card" style="display:flex; height:100%;"><div class="card-image">'+img+'</div> <div class="card-content"> <div class="media-content"><p class="title is-5" style="padding-top:20px;">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                                if(element['result']['url']!=undefined){
+                                    row2+='<div class="column"><div class="card" style="display:flex; height:100%;"><div class="card-image">'+img+'</div> <div class="card-content"> <div class="media-content"><a style="text-decoration:none;" target="_blank" href="'+element['result']['url']+'"><p class="title is-5" style="padding-top:20px;">'+title+'</p></a><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                                }
+                                else{
+                                    row2+='<div class="column"><div class="card" style="display:flex; height:100%;"><div class="card-image">'+img+'</div> <div class="card-content"> <div class="media-content"><p class="title is-5" style="padding-top:20px;">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                                }
                             }
                             else{
                                 if(element['result']['image']!==undefined) {
@@ -80,7 +90,12 @@
                                 else img='<img src="./img/not-available-circle.svg"  style="max-width:90%;>';   
                                 title=element['result']['name'];
                                 subtitle=element['result']['description'];
-                                row3+='<div class="column"><div class="card" style="display:flex; height:100%;"><div class="card-image">'+img+'</div> <div class="card-content"> <div class="media-content"><p class="title is-5" style="padding-top:20px;">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                                if(element['result']['url']!=undefined){
+                                    row3+='<div class="column"><div class="card" style="display:flex; height:100%;"><div class="card-image">'+img+'</div> <div class="card-content"> <div class="media-content"><a style="text-decoration:none;" target="_blank" href="'+element['result']['url']+'"><p class="title is-5" style="padding-top:20px;">'+title+'</p></a><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                                }
+                                else{
+                                    row3+='<div class="column"><div class="card" style="display:flex; height:100%;"><div class="card-image">'+img+'</div> <div class="card-content"> <div class="media-content"><p class="title is-5" style="padding-top:20px;">'+title+'</p><p class="subtitle is-6">'+subtitle+'</p></div></div></div></div>';
+                                }
                             }
                     });
                     $('#showing-div1').append(row1);
